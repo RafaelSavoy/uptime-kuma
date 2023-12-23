@@ -20,7 +20,7 @@
                             <span v-if="hasChildren" class="collapse-padding" @click.prevent="changeCollapsed">
                                 <font-awesome-icon icon="chevron-down" class="animated" :class="{ collapsed: isCollapsed}" />
                             </span>
-                            {{ monitor.name }}
+                            {{ monitor.name }} ({{ monitor.id }})
                         </div>
                         <div v-if="monitor.tags.length > 0" class="tags">
                             <Tag v-for="tag in monitor.tags" :key="tag" :item="tag" :size="'sm'" />
